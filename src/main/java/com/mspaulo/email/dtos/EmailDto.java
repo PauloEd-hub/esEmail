@@ -1,12 +1,13 @@
 package com.mspaulo.email.dtos;
 
-import com.mspaulo.email.enums.StatusEmail;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
 
 import java.time.LocalDateTime;
 
+@Data
 public class EmailDto {
 
     @NotBlank
@@ -21,8 +22,4 @@ public class EmailDto {
     private String subject;
     @NotBlank
     private String text;
-    @NotBlank
-    private LocalDateTime sendDateEmail;
-    @NotBlank
-    private StatusEmail statusEmail;
 }
